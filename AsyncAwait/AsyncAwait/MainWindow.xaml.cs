@@ -18,7 +18,6 @@ using System.Windows.Threading;
 
 namespace AsyncAwait
 {
-
     public partial class MainWindow : Window
     {
         private MediaPlayer mediaPlayer = new MediaPlayer();
@@ -59,7 +58,7 @@ namespace AsyncAwait
             if (openFileDialog.ShowDialog() == true)
             {
                 mediaPlayer.Open(new Uri(openFileDialog.FileName));
-                name= openFileDialog.FileName;
+                name= openFileDialog.SafeFileName;
             }
 
         }
@@ -76,7 +75,6 @@ namespace AsyncAwait
         {
             await Add();
         }
-
         private async void DeleteB_Click(object sender, RoutedEventArgs e)
         {
            await Delete();
