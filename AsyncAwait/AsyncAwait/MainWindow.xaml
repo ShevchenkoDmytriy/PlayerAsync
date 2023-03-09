@@ -14,10 +14,10 @@
     Maximum="{Binding NaturalDuration.TimeSpan.TotalSeconds, ElementName=mediaPlayer}" 
     Value="{Binding Position.TotalSeconds, ElementName=mediaPlayer, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,21,0,0"/>
         <TextBox x:Name="text1" HorizontalAlignment="Left" Margin="75,52,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Height="18"/>
-        <TextBox x:Name="text2" HorizontalAlignment="Left" Margin="75,82,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="500" Height="242"/>
+        <Label x:Name="text2" HorizontalAlignment="Left" Margin="75,82,0,0"   VerticalAlignment="Top" Width="500" Height="242"/>
         <Button x:Name="AddB" Content="Add" HorizontalAlignment="Left" Margin="325,52,0,0" VerticalAlignment="Top" Width="40" Height="18" Click="AddB_Click"/>
         <Button x:Name="DeleteB" Content="Delete" HorizontalAlignment="Center" Margin="0,52,0,0" VerticalAlignment="Top" Width="40" Height="18" Click="DeleteB_Click"/>
-
+ 
 
     </Grid>
 </Window>

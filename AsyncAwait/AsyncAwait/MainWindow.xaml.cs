@@ -81,19 +81,20 @@ namespace AsyncAwait
         }
         async Task Add()
         {
-            list.Add(text1.Text.ToString());
+            text2.Content = "";
+            list.Add(text1.Text);
             foreach (var item in list)
             {
-                text2.Text = item.ToString();
+                text2.Content += $"{item}\n";
             }
-
         }
         async Task Delete()
         {
+            text2.Content = "";
             list.Remove(text1.Text.ToString());
             foreach (var item in list)
             {
-                text2.Text = item.ToString();
+                text2.Content += $"{item}\n";
             }
         }
     }
